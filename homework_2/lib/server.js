@@ -8,7 +8,7 @@ const http = require( 'http' );
 const url = require( 'url' );
 const StringDecoder = require( 'string_decoder' ).StringDecoder;
 const { port } = require( './config' );
-const getHandler = require( './handlers' );
+const getHandler = require( './api' );
 const helpers = require( './helpers' );
 
 // Create the server container

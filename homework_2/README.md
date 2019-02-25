@@ -42,11 +42,14 @@ Provide a `GET` handler to receive all available menu items (statically hardcode
      - `get` - email
      - `put` - email, name, password, address
      - `delete` - email
-   - `/tokens`
-   - `/orders`
-     - `post` - id, email, products (might missing)
+   - `/login`
+     - `post` - email, password
+   - `/logout`
+     - `delete`
+   - `/cart`
+     - `post` - products
      - `get` - id
-     - `put` - id, products, state
+     - `put` - id, state
      - `delete` - id
    - `/checkout`
      - `post` - order id

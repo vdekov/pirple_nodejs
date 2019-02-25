@@ -3,27 +3,6 @@ const storage = require( './../storage' );
 const helpers = require( './../helpers' );
 const config = require( './../config' );
 
-// Root handler
-const handler = data => {
-   // List with all acceptable HTTP request methods
-   const accepted_methods = [ 'post', 'get', 'put', 'delete' ];
-
-   // If the request method is an acceptable redirect to
-   // some of the related sub-handler methods.
-   if ( accepted_methods.includes( data.method ) ) {
-      return users[ data.method ]( data );
-   }
-
-   // Resolve the promise with a not allowed status code and the respective message
-   return Promise.resolve([
-      405,
-      {
-         message : 'Used HTTP request type isn\'t allowed.',
-         data    : null,
-      }
-   ]);
-};
-
 // Verifies token by token id and email as a parameters.
 // Resolve or reject the promise based on the validation status.
 const verifyToken = async ( token_id, email ) => {
@@ -40,7 +19,7 @@ const verifyToken = async ( token_id, email ) => {
    return is_valid;
 };
 
-// Create the users module container
+// Create the users handlers container
 const users = {};
 
 // Required fields: name, email, password, address
@@ -347,5 +326,10 @@ users.delete = async data => {
    return Promise.resolve([]);
 };
 
-// Export the root handler
-module.exports = handler;
+// Export an object with accepted http method types and their respective handlers
+module.exports = {
+   'post'   : users.post,
+   'get'    : users.get,
+   'put'    : users.put,
+   'delete' : users.delete,
+};
