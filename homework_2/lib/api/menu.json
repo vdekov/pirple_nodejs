@@ -1,24 +1,24 @@
 {
-   "products": [
-      {
+   "products": {
+      "pizza": {
          "id": 1,
          "name": "Pizza",
          "price": 2
       },
-      {
+      "chicken": {
          "id": 2,
          "name": "Chicken Meal",
          "price": 4
       },
-      {
+      "pork": {
          "id": 3,
          "name": "Pork Meal",
          "price": 5
       },
-      {
+      "beer": {
          "id": 4,
          "name": "Beer",
          "price": 1
       }
-   ]
+   }
 }

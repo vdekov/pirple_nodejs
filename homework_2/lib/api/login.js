@@ -55,7 +55,7 @@ const login = async data => {
    }
 
    // Generate a token id
-   const token_id = helpers.generateTokenId( config.token_length );
+   const token_id = helpers.generateId( config.token_length );
 
    // Construct a token object
    const token_object = {

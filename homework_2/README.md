@@ -48,11 +48,10 @@ Provide a `GET` handler to receive all available menu items (statically hardcode
      - `delete`
    - `/cart`
      - `post` - products
-     - `get` - id
-     - `put` - id, state
-     - `delete` - id
+     - `get`
+     - `delete`
    - `/checkout`
-     - `post` - order id
+     - `post` - order (cart) id
 
 API calls fingerprint:
 ```json

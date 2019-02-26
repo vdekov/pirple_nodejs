@@ -3,6 +3,7 @@ const users = require( './users' );
 const login = require( './login' );
 const logout = require( './logout' );
 const menu = require( './menu' );
+const cart = require( './cart' );
 
 // Object with all available handlers.
 // Each handler returns a promise.
@@ -16,6 +17,7 @@ const router = {
    login,
    logout,
    menu,
+   cart,
 };
 
 // Function which returns a promisable handler (function) based on a specific path

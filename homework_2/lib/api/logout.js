@@ -11,6 +11,7 @@ const storage = require( './../storage' );
 // Destroy a user-created token.
 // Required fields: id
 // Optional fields: none
+// TODO: Get the token id from the headers
 const logout = async data => {
    // Extract the required field from the query params object
    const token_id = typeof data.query_params.id === 'string' && data.query_params.id.trim().length === config.token_length ? data.query_params.id.trim() : false;

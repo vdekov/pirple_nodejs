@@ -25,8 +25,8 @@ helpers.createHash = string => {
    return hash;
 };
 
-// Generate token id with the pointed length (default 20)
-helpers.generateTokenId = ( length = 20 ) => {
+// Generate id with the pointed length (default 20)
+helpers.generateId = ( length = 20 ) => {
    const allowed_characters = 'abcdefghijklmnopqrstuvwxyz1234567890';
    const hash_array = [];
 
